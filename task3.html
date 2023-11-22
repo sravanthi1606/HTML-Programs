@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <!-- Create a form using all form elements and form validations(min,max,pattern,min length,max length) -->
+
+    <form >
+        <fieldset>
+            <legend><strong>Personal Details</strong></legend>
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="fname" placeholder="First Name" pattern="[a-zA-Z]{6}" required>
+            <input type="text" id="name" name="sname" placeholder="Second Name" pattern="[a-zA-Z]{0,10}" required><br><br>
+            <label for="fname">Father Name : </label>
+            <input type="text" id="Fname" name="ffname" placeholder="Father Name" pattern="[a-zA-Z]{0,10}" required><br><br>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="email" size="30" pattern="[a-z0-9@.]{0,30}"><br><br>
+            <label for="num">Mobile :</label>
+            <input type="tel" id="num" class="mobile" pattern="[0-9]{10}"><br><br>
+            <label for="gender">Gender</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+            <label>Address:</label><br>
+            <textarea cols="20" rows="7"></textarea>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Select a Course</legend>
+            <input type="radio" name="Course" value="mpcs">MPCs
+            <input type="radio" name="Course" value="mpcs">MCCs
+            <input type="radio" name="Course" value="mpcs">MStCs
+            <input type="radio" name="Course" value="mpcs">MPC
+            
+        </fieldset><br>
+        <fieldset>
+            <legend>Skills</legend>
+            <select id="skills" name="skill">
+                <optgroup label="Frontend">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Javascript">Javascript</option>
+                </optgroup>
+                <optgroup label="Backend">
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="Sql">Sql</option>
+                </optgroup>
+            </select>
+        </fieldset><br>
+        <fieldset>
+            <legend>Select Your Photo</legend>
+            <input type="file" name="photo">
+        </fieldset><br>
+        <fieldset>
+            <legend>Select Your File</legend>
+            <input type="file" name="file">
+        </fieldset><br>
+        <fieldset>
+            <legend>Set your password</legend>
+            <label for="pword">Password:</label>
+            <input type="password" id="pword" name="pword">
+        </fieldset><br>
+        <fieldset>
+            <legend>Select Your District</legend>
+            <input list="district" name="district">
+            <datalist id="district" >
+                <option>Wrangal</option>
+                <option>Karimnagar</option>
+                <option>Pedapalli</option>
+                <option>Mahabubabad</option>
+                <option>Janagoan</option>
+            </datalist>
+        </fieldset><br><br>
+
+        <input type="button" value="0k" name="ok" >
+        <input type="submit" value="submit" name="submit" formaction="submit.html">
+        <input type="reset" value="reset" name="reset">
+    </form>
+</body>
+</html>
